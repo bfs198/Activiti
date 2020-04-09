@@ -75,7 +75,8 @@ public class ProcessEngineImpl implements ProcessEngine {
     this.sessionFactories = processEngineConfiguration.getSessionFactories();
     this.transactionContextFactory = processEngineConfiguration.getTransactionContextFactory();
     this.formEngineRepositoryService = processEngineConfiguration.getFormEngineRepositoryService();
-    this.formEngineFormService = processEngineConfiguration.getFormEngineFormService();
+   // this.formEngineFormService = processEngineConfiguration.getFormEngineFormService();
+    this.formEngineFormService = (org.activiti.form.api.FormService) processEngineConfiguration.getFormEngineFormService();
 
     if (processEngineConfiguration.isUsingRelationalDatabase() && processEngineConfiguration.getDatabaseSchemaUpdate() != null) {
       commandExecutor.execute(processEngineConfiguration.getSchemaCommandConfig(), new SchemaOperationsProcessEngineBuild());
