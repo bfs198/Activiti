@@ -949,7 +949,8 @@ public abstract class ProcessEngineConfigurationImpl extends ProcessEngineConfig
     databaseTypeMappings.setProperty("DB2/PTX", DATABASE_TYPE_DB2);
     databaseTypeMappings.setProperty("DB2/2", DATABASE_TYPE_DB2);
     databaseTypeMappings.setProperty("DB2 UDB AS400", DATABASE_TYPE_DB2);
-	databaseTypeMappings.setProperty("dm", DATABASE_TYPE_DM);
+	databaseTypeMappings.setProperty("DM", DATABASE_TYPE_DM);
+    databaseTypeMappings.setProperty("DM DBMS", DATABASE_TYPE_DM);
     return databaseTypeMappings;
   }
 
